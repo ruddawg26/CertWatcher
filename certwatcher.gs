@@ -1,10 +1,10 @@
 const slack_osint_webhook ="<PUT SLACK WEBHOOK HERE>";
 const domain = "<PUT DOMAIN HERE>";
 
-/* function search crt.sh for the iLIKE the comman name for he domain. There are other things you could do like 
-by organization but this has worked best so far for one domain. IOutput is Json so easier to parse
-If you use different URL, there are diferent responses it gives for field
-for q=Org the field you want is common_name
+/* function search crt.sh for the iLIKE the common name for he domain. There are other things you could do like 
+search by organization but this has worked best so far for one domain. Output is JSON for easier parsing.
+If you use different URL for getting requests, make sure you parse correctly. For example, if using organization
+with q=Org the field you want to parse out is common_name
 */
 function find_cert_URL() {
   var crt_sh_URL = "https://crt.sh/?CN=" + domain + "&exclude=expired&deduplicate=Y&output=json"
