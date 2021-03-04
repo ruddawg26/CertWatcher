@@ -47,3 +47,4 @@ function log_to_slack(message) {
   };
 
   var response = UrlFetchApp.fetch(slack_osint_webhook, options);
+}
